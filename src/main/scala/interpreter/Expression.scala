@@ -2,8 +2,6 @@ package interpreter
 
 import java.util
 
-import interpreter.Interaction.Interp
-
 import scala.io.StdIn
 
 trait Expression {
@@ -71,6 +69,7 @@ object InterpreterTest extends App {
   println(s"($tokenString): ${stack.pop().interpret()}")
 }
 
+//Alternativa con ADT's
 
 sealed trait Option[A]{
   /**
@@ -99,6 +98,8 @@ object FunInterpreterTest extends App {
   println(s"Algun numero: ${double(algunNumero)}\nNingun numero: ${double(ningunNumero)}")
 
 }
+
+//Alternativa con el Free Monad pattern
 
 import cats._
 import cats.free._
