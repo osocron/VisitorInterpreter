@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/designpatterns.iml" filepath="$PROJECT_DIR$/.idea/modules/designpatterns.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/designpatterns-build.iml" filepath="$PROJECT_DIR$/.idea/modules/designpatterns-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/visitorinterpreter.iml" filepath="$PROJECT_DIR$/.idea/modules/visitorinterpreter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/visitorinterpreter-build.iml" filepath="$PROJECT_DIR$/.idea/modules/visitorinterpreter-build.iml" />
     </modules>
   </component>
 </project>

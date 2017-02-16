@@ -6,5 +6,10 @@
         <plugin path="C:\Users\osocr\.ivy2\cache\org.scalamacros\paradise_2.12.1\jars\paradise_2.12.1-2.1.0.jar" />
       </plugins>
     </profile>
+    <profile name="SBT 2" modules="visitorinterpreter">
+      <plugins>
+        <plugin path="$USER_HOME$/.ivy2/cache/org.scalamacros/paradise_2.12.1/jars/paradise_2.12.1-2.1.0.jar" />
+      </plugins>
+    </profile>
   </component>
 </project>

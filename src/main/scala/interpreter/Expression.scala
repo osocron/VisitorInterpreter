@@ -108,10 +108,12 @@ import freasymonad.cats.free
 @free trait Interaction {
 
   type InteractionF[A] = Free[GrammarADT, A]
-  sealed trait GrammarADT[A]
 
   def ask(a: String): InteractionF[String]
+
   def tell(msg: String): InteractionF[Unit]
+
+  sealed trait GrammarADT[A]
 
 }
 
@@ -143,6 +145,7 @@ object ConsoleTest extends App {
 
 object SpeechTest extends App {
   import edu.cmu.sphinx.api._
+
   import scala.util.control.Breaks._
 
   val configuration = new Configuration
