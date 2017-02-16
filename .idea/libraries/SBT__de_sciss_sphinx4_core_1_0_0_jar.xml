@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: de.sciss:sphinx4-core:1.0.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/de.sciss/sphinx4-core/jars/sphinx4-core-1.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/de.sciss/sphinx4-core/srcs/sphinx4-core-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
