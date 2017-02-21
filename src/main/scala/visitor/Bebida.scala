@@ -1,30 +1,33 @@
 package visitor
 
+
 trait Visitable {
   def accept(v: Visitor): Unit
 }
 
 sealed trait Articulo {
+  val nombre: String
+  val descripcion: String
   val precio: BigDecimal
 }
 
 case class CocaCola() extends Articulo with Visitable {
-  val nombre: String = "Coca-Cola"
-  val descripcion: String = "Deliciosa bebida de Coca-Cola co."
+  override val nombre: String = "Coca-Cola"
+  override val descripcion: String = "Deliciosa bebida de Coca-Cola co."
   override val precio: BigDecimal = BigDecimal(9.99)
   override def accept(v: Visitor): Unit = v.visit(this)
 }
 
 case class Guitarra() extends Articulo with Visitable {
-  val nombre: String = "Guitarra Fender"
-  val descripcion: String = "Guitarra Fender XS-9000"
+  override val nombre: String = "Guitarra Fender"
+  override val descripcion: String = "Guitarra Fender XS-9000"
   override val precio: BigDecimal = BigDecimal(25000.00)
   override def accept(v: Visitor): Unit = v.visit(this)
 }
 
 case class Lapiz() extends Articulo with Visitable {
-  val nombre: String = "Lapiz Mirado"
-  val descripcion: String = "Lapiz Mirado 2BH"
+  override val nombre: String = "Lapiz Mirado"
+  override val descripcion: String = "Lapiz Mirado 2BH"
   override val precio: BigDecimal = BigDecimal(6.50)
   override def accept(v: Visitor): Unit = v.visit(this)
 }
@@ -46,7 +49,7 @@ object Tienda extends App {
   val articulos = List(CocaCola(), Guitarra(), Lapiz())
   articulos foreach { _.accept(ImpuestoVisitor) }
 
-  //Alternativa al patrón Visitor en la programación funcional - Pattern matching
+  //Usando Pattern-Matching
   def calcularImpuesto(a: Articulo): Unit = a match {
     case c@CocaCola() =>  println(s"El impuesto de la coca es de: ${c.precio * .16}")
     case g@Guitarra() => println(s"El impuesto de la guitarra es de: ${g.precio * .15}")
